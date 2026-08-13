@@ -15,12 +15,15 @@ export default function Home() {
 
       {/* Profile & Header */}
       <div className="flex flex-col items-center px-4 pt-2 pb-6 text-center max-w-2xl mx-auto">
-        <div className="relative w-20 h-20 md:w-24 md:h-24 mb-4 rounded-full p-[2px] bg-gradient-to-r from-blue-500 to-green-500">
-          <div className="w-full h-full rounded-full bg-slate-800 border-2 border-[#0d1117] overflow-hidden flex items-center justify-center relative">
-            <Image src="/logo.jpeg" alt="Gopal Shinde" fill className="object-cover" />
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-8 mb-8 w-full max-w-4xl mx-auto">
+          {/* Left Logo - MyBillion */}
+          <div className="relative w-40 h-40 md:w-48 md:h-48 rounded-full bg-white overflow-hidden shrink-0 border-4 border-white shadow-[0_0_20px_rgba(255,255,255,0.1)]">
+            <Image src="/logo.jpeg" alt="MyBillion" fill className="object-contain p-2" />
           </div>
-          <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-green-500 text-white text-[9px] md:text-[10px] font-black uppercase px-2 py-0.5 rounded border-2 border-[#0d1117] flex items-center gap-1">
-            <div className="w-1.5 h-1.5 bg-white rounded-full animate-pulse" /> LIVE
+
+          {/* Right Card - Instagram Profile */}
+          <div className="w-full max-w-xl rounded-3xl overflow-hidden shadow-2xl border border-slate-800/80">
+            <img src="/gopal.png" alt="tradewith_gopal" className="w-full h-auto object-cover" />
           </div>
         </div>
 
@@ -59,16 +62,14 @@ export default function Home() {
         <div className="flex items-center justify-between bg-[#161b22] px-4 py-3 rounded-xl border border-slate-800">
           <div className="flex items-center gap-2 text-[10px] text-slate-400 font-bold">
             <div className="w-1.5 h-1.5 bg-[#00a86b] rounded-full animate-pulse" />
-            Tracking the pairs that matter, in real time • 00:00:00
+            Tracking the pairs that matter
           </div>
           <div className="flex items-center gap-2">
             <div className="bg-[#0d1117] rounded-md flex border border-slate-700 p-0.5">
 
               <span className="px-2 py-0.5 text-[9px] font-bold text-slate-500">DEMO</span>
             </div>
-            <button className="p-1.5 bg-[#1a1f28] rounded-md border border-slate-700">
-              <RefreshCcw className="w-3 h-3 text-slate-400" />
-            </button>
+
           </div>
         </div>
 
@@ -78,7 +79,7 @@ export default function Home() {
             { name: "XAUUSD", val: "+0.34%", color: "text-[#00a86b]", bg: "border-[#00a86b]/30 bg-[#00a86b]/5" },
             { name: "BTC/USD", val: "+1.12%", color: "text-[#00a86b]", bg: "border-[#00a86b]/30 bg-[#00a86b]/5" },
             { name: "ETH/USD", val: "+0.78%", color: "text-[#00a86b]", bg: "border-slate-800 bg-[#161b22]" },
-            { name: "EUR/USD", val: "-0.12%", color: "text-red-500", bg: "border-slate-800 bg-[#161b22]" },
+            { name: "EUR/USD", val: "-0.12%", color: "text-[#00a86b]", bg: "border-slate-800 bg-[#161b22]" },
             { name: "Crypto VIX", val: "+0.26%", color: "text-[#00a86b]", bg: "border-slate-800 bg-[#161b22]" }
           ].map((idx, i) => (
             <div key={i} className={`flex flex-col items-center justify-center p-2 rounded-lg border ${idx.bg}`}>
@@ -120,11 +121,11 @@ export default function Home() {
           </div>
         ))} */}
 
-        <div className="pt-2">
+        {/* <div className="pt-2">
           <Link href="https://telegram.me/Forex_Trades_MyBillion" className="w-full bg-slate-800 hover:bg-slate-700 text-white font-bold py-3 rounded-xl flex items-center justify-center gap-2 transition-colors text-xs">
             See Full Breakdowns on Telegram community <ArrowRight className="w-3 h-3" />
           </Link>
-        </div>
+        </div> */}
 
         {/* Features Grid */}
         <div className="grid grid-cols-3 gap-3 pt-4">
@@ -144,11 +145,11 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="pt-2">
+        {/* <div className="pt-2">
           <Link href="https://telegram.me/Forex_Trades_MyBillion" className="w-full bg-[#00a86b] hover:bg-[#00915c] text-white font-bold py-3 rounded-xl flex items-center justify-center gap-2 transition-colors text-xs shadow-lg shadow-[#00a86b]/20">
             Unlock Free Access
           </Link>
-        </div>
+        </div> */}
 
         {/* Market Focus Section */}
         <div className="pt-8">
@@ -172,11 +173,11 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <div className="pt-4">
+          {/* <div className="pt-4">
             <Link href="https://telegram.me/Forex_Trades_MyBillion" className="w-full bg-transparent border-2 border-[#00a86b] text-[#00a86b] hover:bg-[#00a86b]/10 font-bold py-3 rounded-xl flex items-center justify-center gap-2 transition-colors text-xs">
               Explore These Markets on Telegram
             </Link>
-          </div>
+          </div> */}
         </div>
 
         {/* What you will learn */}
@@ -223,11 +224,11 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <div className="pt-4">
+          {/* <div className="pt-4">
             <Link href="https://telegram.me/Forex_Trades_MyBillion" className="w-full bg-[#00a86b] hover:bg-[#00915c] text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 transition-colors shadow-[0_0_20px_rgba(0,168,107,0.3)]">
               See What You're Missing — Join Now
             </Link>
-          </div>
+          </div> */}
         </div>
 
         {/* Stats 2x2 */}
@@ -291,32 +292,26 @@ export default function Home() {
           </ul>
         </div>
 
-        {/* Join button outline */}
-        <div className="pt-8">
-          <Link href="https://telegram.me/Forex_Trades_MyBillion" className="w-full bg-transparent border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-500/10 font-bold py-4 rounded-xl flex items-center justify-center gap-2 transition-colors">
-            <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.19-.08-.05-.19-.02-.27 0-.12.03-1.96 1.25-5.54 3.67-.52.35-1 .53-1.42.51-.47-.02-1.38-.27-2.05-.49-.83-.27-1.49-.41-1.43-.87.03-.24.36-.48 1-.74 3.91-1.7 6.52-2.83 7.82-3.37 3.73-1.56 4.5-1.83 5-1.84.11 0 .36.03.49.14.11.09.15.22.16.35-.01.07-.01.16-.02.21z" /></svg>
-            Join 1,00,000+ Traders on Telegram
-          </Link>
-        </div>
+
 
         {/* Footer Disclaimer */}
-        <div className="pt-6 border-t border-slate-800/50 mt-8 flex gap-2 items-start text-slate-500 text-[9px] leading-relaxed">
+        <div className=" border-t border-slate-800/5 flex gap-2 items-start text-slate-500 text-[9px] leading-relaxed">
           <ShieldCheck className="w-4 h-4 shrink-0 mt-0.5" />
           <p>For educational purposes only. This is not investment or trading advice. Trading in forex, gold (XAUUSD) and cryptocurrency carries a high level of risk and may not be suitable for everyone. Past performance does not guarantee future results.</p>
         </div>
 
-        <p className="text-center text-[9px] text-slate-600 mt-4 pb-8">
+        <p className="text-center text-[9px] text-slate-600 mt-4 pb-4">
           © 2026 Gopal Shinde · Trading education you can actually understand
         </p>
-        <div className="pt-2 sticky">
-          <Link href="https://telegram.me/Forex_Trades_MyBillion" className="w-full bg-[#00a86b] hover:bg-[#00915c] text-white font-bold py-3 rounded-xl flex items-center justify-center gap-2 transition-colors text-xs shadow-lg shadow-[#00a86b]/20">
-            Join Now  Telegram
-          </Link>
-        </div>
+
       </div>
 
-
-
+      <div className="sticky bottom-0 left-0 right-0 p-4 bg-[#0d1117]/90 backdrop-blur-md">
+        <Link href="https://telegram.me/Forex_Trades_MyBillion" className="max-w-md mx-auto w-full bg-transparent border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-500/10 font-bold py-4 rounded-xl flex items-center justify-center gap-2 transition-colors">
+          <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.19-.08-.05-.19-.02-.27 0-.12.03-1.96 1.25-5.54 3.67-.52.35-1 .53-1.42.51-.47-.02-1.38-.27-2.05-.49-.83-.27-1.49-.41-1.43-.87.03-.24.36-.48 1-.74 3.91-1.7 6.52-2.83 7.82-3.37 3.73-1.56 4.5-1.83 5-1.84.11 0 .36.03.49.14.11.09.15.22.16.35-.01.07-.01.16-.02.21z" /></svg>
+          Join 1,00,000+ Traders on Telegram
+        </Link>
+      </div>
 
     </div>
 
